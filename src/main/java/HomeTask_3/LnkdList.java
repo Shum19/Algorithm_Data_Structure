@@ -17,7 +17,7 @@ public class LnkdList {
 //          смена сестами значений в циикле
             cur.next = tailNode; // Меняем следующее значение в спискее на null;
             tailNode = cur; // в хвост ставим текущее значение
-            root = cur;
+            root = cur; // переключение root у списка
 
             cur = tmp;
            }
