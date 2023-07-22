@@ -105,7 +105,7 @@ public class Tree {
     }
     private Node leftSwap(Node node){
         Node leftChild = node.leftChild;
-        Node btwnChild = node.rightChild;
+        Node btwnChild = leftChild.rightChild;// исправил до этого, было так btwnChild = node.rightChild
         leftChild.rightChild = node;
         node.leftChild = btwnChild;
         leftChild.color = node.color;
@@ -115,7 +115,7 @@ public class Tree {
     }
     private Node rightSwap(Node node){
         Node rightChild = node.rightChild;
-        Node btwnChild = node.leftChild;
+        Node btwnChild = rightChild.leftChild;// исправил до этого, было так btwnChild = node.leftChild
         rightChild.leftChild = node;
         node.rightChild = btwnChild;
         rightChild.color = node.color;
